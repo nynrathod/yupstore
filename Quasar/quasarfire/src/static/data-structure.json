@@ -1,0 +1,82 @@
+{
+  "chats" : {
+    "IieXHJFknDaW8WuUIZdptRFkZ0i2" : {
+      "TsIoAqPfZtQ8suuHxl6z5S7hu7N2" : {
+        "-MMQK12vw_cAsQFSmifM" : {
+          "from" : "me",
+          "text" : "im also fine"
+        },
+        "-MMQK50LOEZj1JQzf0s-" : {
+          "from" : "then",
+          "text" : "How was your last match?"
+        },
+        "-MMQKCluBCpaVQMYxhu_" : {
+          "from" : "me",
+          "text" : "Not good"
+        },
+        "-MMQKDrXxw3GyFMn1_Nh" : {
+          "from" : "then",
+          "text" : "Ok cool"
+        },
+        "MESSAGE01" : {
+          "from" : "me",
+          "text" : "Hi How are you"
+        },
+        "MESSAGE02" : {
+          "from" : "then",
+          "text" : "good thanks, Wbu"
+        }
+      }
+    },
+    "TsIoAqPfZtQ8suuHxl6z5S7hu7N2" : {
+      "IieXHJFknDaW8WuUIZdptRFkZ0i2" : {
+        "-MMQK12xcrMSrZbapeSj" : {
+          "from" : "then",
+          "text" : "im also fine"
+        },
+        "-MMQK50Icp3RJVgmSK7a" : {
+          "from" : "me",
+          "text" : "How was your last match?"
+        },
+        "-MMQKClwWFw_3d5nq7js" : {
+          "from" : "then",
+          "text" : "Not good"
+        },
+        "-MMQKDrWGFY0-cG1qAeJ" : {
+          "from" : "me",
+          "text" : "Ok cool"
+        },
+        "MESSAGE01" : {
+          "from" : "then",
+          "text" : "Hi How are you"
+        },
+        "MESSAGE02" : {
+          "from" : "me",
+          "text" : "good thanks, Wbu"
+        }
+      }
+    }
+  },
+  "users" : {
+    "IieXHJFknDaW8WuUIZdptRFkZ0i2" : {
+      "email" : "rohit@mail.com",
+      "name" : "Rohit",
+      "online" : true
+    },
+    "TsIoAqPfZtQ8suuHxl6z5S7hu7N2" : {
+      "email" : "virat@mail.com",
+      "name" : "virat",
+      "online" : true
+    },
+    "hGKYyK5IVjaH4O3SDDBqSyIVc3x2" : {
+      "email" : "dhoni@mail.com",
+      "name" : "Dhoni",
+      "online" : false
+    },
+    "wVweKRjTFuU9nAIiuTizys5E07t1" : {
+      "email" : "shikhar@mail.com",
+      "name" : "Shikhar",
+      "online" : false
+    }
+  }
+}
