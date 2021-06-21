@@ -1,0 +1,241 @@
+used Library:
+slick slider => https://gs-shop.github.io/vue-slick-carousel/?ref=madewithvuejs.com#/example/responsive
+image zoomer => https://github.com/samjonesigd/vue-image-zoomer
+
+config-
+custom fonts
+icons
+css
+animation
+
+
+
+component:
+<template>
+    <h1>Component Name</h1>
+</template>
+<script>
+export default {
+    name: 'home'
+}
+</script>
+
+in page
+import home from './components/Home.vue'
+export default {
+    components: {
+        home
+    }
+}
+
+and call via
+<home />
+
+Layout:
+<template>
+<q-layout>
+  <!-- vue file for Layout: -->
+  <q-page-container>
+    <router-view />
+  </q-page-container>
+  ...
+</q-layout>
+</template>
+
+Page:
+<!-- vue file for a Page: -->
+<template>
+<q-page padding>
+  <!-- page content -->
+</q-page>
+</template>
+
+
+
+
+Laravel
+Table always plural and modal always singular with capital
+
+for sanctum integration
+https://qirolab.com/posts/create-spa-authentication-using-laravel-sanctum-and-vuejs
+
+login and registercontroller same as abouve url
+user model
+api.php inlclude controller url
+kernel.php setting
+core.php setting
+sanctum install
+publish and migrate db
+php artisan key generate
+.env data check
+
+->for js-cookie install
+npm install --save js-cookie
+->then npm audit fix
+->check .env all data properly
+->use use App\Http\Controllers\ProvisionServer; in api.php route
+->controller and model check
+
+
+
+https://github.com/christiannwamba/vue-auth-vuex/blob/master/src/store.js
+https://github.com/christiannwamba/scotch-vue-store
+
+
+
+https://preview.themeforest.net/item/plantish-plant-responsive-opencart-3-theme/full_screen_preview/30167024?_ga=2.166227642.566466337.1613991829-957951646.1613991798
+
+https://preview.themeforest.net/item/lukani-plant-and-flower-shop-ecommerce-html-template/full_screen_preview/25142862?_ga=2.125061513.2069017969.1613993237-957951646.1613991798
+
+https://lukani-demo.myshopify.com/
+
+http://demo.ishitechnolabs.com/OPC056/
+
+https://geenesta.myshopify.com/
+
+https://www.wix.com/website-template/view/html/2175?siteId=f079a559-b478-4643-a17b-13edb1ee067b&metaSiteId=f9bf8eee-6569-46fa-b4e8-e6b8ca8990c1
+
+https://cottonsjaipur.com/ -> for customer website header
+
+https://demo.goodlayers.com/kleanity/
+
+https://neuronthemes.com/bifrost/product/product-variable/
+
+https://themes.magesolution.com/claue/m2/bn/ -> for mobile header
+
+https://www.hulii.com/au/ => for customer mobile header
+
+https://www.templatemonsterpreview.com/demo/74160.html => for red and green combo
+
+
+
+http://preview.themeforest.net/item/xmee-login-and-register-form-html-templates/full_screen_preview/25961819?_ga=2.20002360.1819320528.1614690860-1484683150.1614683926
+
+https://uigaint.com/demo/html/anfra_2/version1/covid-1.html
+
+// sidebar
+https://themes.magesolution.com/claue/m2/men/watch.html
+http://preview.themeforest.net/item/claue-clean-minimal-magento-2-theme/full_screen_preview/20155150?_ga=2.107721412.795708750.1614746849-882450455.1614746838
+
+https://checkmate.dk/ => for banner video
+
+
+// shop page banner for customer website
+https://demo-elessi.myshopify.com/collections/clothing?fts=0
+
+// customer website
+https://demo.hasthemes.com/negan-preview/negan/index.html
+
+
+
+
+https://www.freecodecamp.org/news/reducing-css-bundle-size-70-by-cutting-the-class-names-and-using-scope-isolation-625440de600b/
+
+
+
+
+// Few More
+https://cosy.la-studioweb.com/main-fashion-03/
+https://cosy.la-studioweb.com/main-bike/
+https://cosy.la-studioweb.com/main-sport/#clothing
+https://cosy.la-studioweb.com/main-organic/
+
+https://codepen.io/virgilpana/full/ZYqJXN/
+https://codyhouse.co/demo/quick-add-to-cart/index.html
+
+https://min-plant-store-demo.myshopify.com/
+https://ps-plants.myshopify.com/products/bonorum?variant=31756497780780 => for newsletter
+
+// for free plants photo
+https://unsplash.com/photos/RHe-ebrSUTE
+https://www.pexels.com/photo/green-succulent-plants-1030913/
+
+
+
+
+project detail:
+quasar - started -> 24/02/2021
+laravel - started -> 19/03/2021
+
+
+yupsite - 
+quasar -> started -> 16/05/2021
+
+
+
+
+
+Extension for vscode
+Sublime Text Keymap and Settings Importer
+Tabnine Autocomplete
+Vetur
+Auto close tag
+duplicate actions
+incrementor
+inser numbers
+
+
+
+
+
+
+// for deploy on cpanel
+for laravel
+- upload laravel whole project and copy index.php and .htaccess from public and move to root
+- change /../ from index.php file to /
+- update web.php and add Route::view('/', 'your_name');
+- update welcome.blade and add
+    @php
+        // This file must be stored inside Laravel resources/views/your_name.blade.php
+        // this include once makes reference to the public folder by default
+        @include_once 'index.html';
+    @endphp
+- update .env file, make username and pass for database, and update records as per dreammonkey https://dreamonkey.com/en/blog/how-to-setup-a-pwa-with-quasar-and-laravel/
+- also make sure live url updated on sanctum.php, config/cors.php, and .env
+
+for quasar
+- before builing bundle update base url to /api in Api.js
+- then place all spa folder files in root of project on cpanel
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+List key things to consider when coding with SEO in mind.
+
+Specifying an alt tag on images
+Using the correct HTML tags for content hierarchy i.e., <h1>/<h2>/<h3> and p
+Connect the site to the company’s social pages
+Add an XML sitemap
+Avoid broken links
+Use vanity/friendly URLs (human-readable)
+Add a robots.txt file
+Integrate Google analytics (or alternative)
+Specify a favicon, bonus for specifying browser-specific icons
+Ensure lightning-fast page load time
+Avoid JavaScript errors
+Optimise assets (including minification)
+Enable and force SSL
+Specify unique titles for each page without exceeding 70 characters
+Include a meta description on each page
+Ensure there is enough content with enough relevant keywords (search engines will penalise your site if all pages are one-sentence pages)
+Leverage browser caching
+Avoid W3C markup validation errors
+Specify relevant meta tags

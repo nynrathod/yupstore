@@ -1,0 +1,205 @@
+file picker single
+-----------
+
+singlefile: null,
+singlefilepath: '',
+
+<q-file
+  v-model="singlefile"
+  :label="singlepicker"
+  square
+  flat
+  counter
+  outlined
+  use-chips
+  clearable
+  multiple
+  max-files="1"
+  accept=".jpg,.png,.jpeg,.JPG,.PNG,.JPEG,.gif"
+  @input="uploadsingle"
+  @rejected="onRejected"
+  ref="uploadersingle"
+/>
+
+
+ onChange (files) {
+      this.file_path = files[0].name;
+      // console.log(files[0])
+      // alert(this.file_path)
+
+    },
+
+uploadsingle () {
+      this.singlespinner = true;
+      let formData = new FormData()
+      if (this.singlefile && this.singlefile.length > 0) {
+        for (let i = 0; i < this.singlefile.length; i++) {
+          formData.append('singlefile[' + i + ']', this.singlefile[i])
+          // console.log(formData);
+        }
+        for (let [key, value] of Object.entries(this.form)) {
+          formData.append(key, value)
+        }
+        let mysku = "mysku"
+        formData.append(mysku, this.$route.params.sku)
+        // let sellerid = "sellerid"
+        // formData.append(sellerid, this.$store.state.example.userid)
+        let imagetype = "imagetype"
+        formData.append(imagetype, 'main')
+        let config = {
+          headers: { 'content-type': 'multipart/form-data' }
+        }
+        let sku = "asdf"
+
+        this.$store.dispatch('example/uploadsingle', { formData, config })
+          .then(function (response) {
+            // currentObj.success = response.data.success;
+            // this.singlefile = null
+            // alert(this.singlespinner)
+
+
+
+            // if (response.data == 'Uploaded Succesfully') {
+            //   this.singlespinner = false
+            // }
+
+          })
+          .catch(function (error) {
+            // currentObj.output = error;
+
+          });
+
+      }
+    },
+
+
+
+    public function uploadsingle(Request $request){
+
+        // $fileName = time().'.'.$request->file->getClientOriginalExtension();
+        // $request->file->move(public_path('upload'), $fileName);
+              
+        // return response()->json(['success'=>'You have successfully upload file.']);
+
+ //        return response($request->file->getClientOriginalExtension());
+
+ // $files = [];
+ //        foreach($request->file->getClientOriginalExtension() as $file)
+ //            {
+ //                return response($file);
+ //            }
+
+        // store uploaded files if any
+        // return response(Auth::user()->seller_id);
+
+        if ($request->file('singlefile') && count($request->file('singlefile')) > 0) {
+            $i = 1;
+            foreach ($request->file('singlefile') as $file) {
+
+
+                $fileName = date("YmdHis",time()).'.'.$file->getClientOriginalName();
+
+                $table = new ProductImage;
+                $table->image_id = $i;
+                $table->image = $fileName;
+                $table->type = $request->imagetype;
+                $table->product_sku = $request->mysku;
+                $table->seller_id = Auth::user()->seller_id;
+                $table->save();
+
+                $file->move('upload/'.Auth::user()->seller_id, $fileName);
+
+            }
+            // $data['files_path'] = $upDir;
+        }
+        return response('Uploaded Succesfully');
+    }
+
+    -------- />
+
+
+
+
+multi file picker
+files: null,
+
+<q-file
+  v-model="files"
+  :label="multiplepicker"
+  square
+  flat
+  counter
+  outlined
+  use-chips
+  clearable
+  multiple
+  accept=".jpg,.png,.jpeg,.JPG,.PNG,.JPEG,.gif"
+  @input="uploadmultiple"
+  @rejected="onRejected"
+/>    
+
+
+uploadmultiple () {
+      // this.singlespinner = true
+      let formData = new FormData()
+      if (this.files && this.files.length > 0) {
+
+        for (let i = 0; i < this.files.length; i++) {
+          formData.append('files[' + i + ']', this.files[i])
+          // console.log(formData);
+        }
+        for (let [key, value] of Object.entries(this.form)) {
+          formData.append(key, value)
+        }
+        let mysku = "mysku"
+        formData.append(mysku, this.$route.params.sku)
+        // let sellerid = "sellerid"
+        // formData.append(sellerid, this.$store.state.example.userid)
+        let imagetype = "imagetype"
+        formData.append(imagetype, 'gallery')
+        let config = {
+          headers: { 'content-type': 'multipart/form-data' }
+        }
+        this.$store.dispatch('example/uploadmultiple', { formData, config })
+          .then(function (response) {
+            // currentObj.success = response.data.success;
+            // location.reload()
+
+          })
+          .catch(function (error) {
+            // currentObj.output = error;
+          });
+      }
+    },
+
+
+
+    public function uploadmultiple(Request $request) {
+            if ($request->file('files') && count($request->file('files')) > 0) {
+             
+
+                if(ProductImage::where('product_sku',  $request->mysku)
+                ->where('seller_id',  Auth::user()->seller_id)
+                ->where('type',  'gallery')->get()) {
+                     $order = ProductImage::max('image_id');
+                    $i = $order+1;
+                } else {
+                    $i = 1;
+                }
+                
+                foreach ($request->file('files') as $file) {
+                    $fileName = date("YmdHis",time()).'.'.$file->getClientOriginalName();
+
+                    $table = new ProductImage;
+                    $table->image_id = $i;
+                    $table->image = $fileName;
+                    $table->type = $request->imagetype;
+                    $table->product_sku = $request->mysku;
+                    $table->seller_id = Auth::user()->seller_id;
+                    $table->save();
+
+                    $file->move('upload/'.Auth::user()->seller_id, $fileName);
+                    $i++;
+                }
+            }
+         }
