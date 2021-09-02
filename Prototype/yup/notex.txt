@@ -1,6 +1,8 @@
 used Library:
 slick slider => https://gs-shop.github.io/vue-slick-carousel/?ref=madewithvuejs.com#/example/responsive
 image zoomer => https://github.com/samjonesigd/vue-image-zoomer
+https://github.com/SortableJS/Vue.Draggable
+https://www.npmjs.com/package/quasar-app-extension-vuelidate-rules?activeTab=readme
 
 config-
 custom fonts
@@ -199,7 +201,11 @@ for quasar
 
 
 
-
+for quasar v-3
+keep new error 404 file as it is
+place route, then component and layout, update quasar config as old
+then check stylus land in all file
+add vue-validate, draggable and other require ext, js-cookie
 
 
 

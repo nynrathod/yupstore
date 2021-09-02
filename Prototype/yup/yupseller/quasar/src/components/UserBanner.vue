@@ -146,7 +146,7 @@ export default {
   name: 'UserBanner',
   data () {
     return {
-      user: null,
+      user: '',
       isauth: true,
       totalorders: '',
       links2: [
