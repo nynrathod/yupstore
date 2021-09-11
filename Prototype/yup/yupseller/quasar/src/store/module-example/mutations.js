@@ -84,3 +84,9 @@ export function fetchorders (state, payload) {
     // console.log(payload);
     state.orderjson = payload
 }
+
+export function fetchorderinfo (state, payload) {
+    state.orderinfo = payload
+    // console.log(payload);
+
+}

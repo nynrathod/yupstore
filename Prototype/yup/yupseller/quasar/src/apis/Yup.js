@@ -120,6 +120,11 @@ export default {
     return Api.post('/fetchorders')
   },
 
+  async fetchorderinfo (data) {
+    await Csrf.getCookie()
+    return Api.post('/fetchorderinfo', data)
+  },
+
   async savenameitem (udata) {
     await Csrf.getCookie()
     return Api.post('/savenameitem', udata)

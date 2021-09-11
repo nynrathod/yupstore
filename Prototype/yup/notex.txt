@@ -215,7 +215,9 @@ add vue-validate, draggable and other require ext, js-cookie
 
 
 
-
+Not Working
+vuedraggable
+sidebar routing 
 
 
 
@@ -245,3 +247,16 @@ Ensure there is enough content with enough relevant keywords (search engines wil
 Leverage browser caching
 Avoid W3C markup validation errors
 Specify relevant meta tags
+
+
+https://www.boostifythemes.com/demo/wp/onestores/product/pippi-longstocking-tee/
+for wishlist btn
+
+https://www.boostifythemes.com/demo/wp/onestores/pet/
+
+
+good structure  
+https://blueskytechco.com/rubix/
+
+
+https://eatsy.bold-themes.com/cupcakes/shop/

@@ -76,6 +76,7 @@ Route::post('/deleteimage', [FileController::class, 'deleteimage']);
 
 
 Route::post('/fetchorders', [OrderController::class, 'fetchorders']);
+Route::post('/fetchorderinfo', [OrderController::class, 'fetchorderinfo']);
 
 
 Route::get('/totalorders', [SiteInfoController::class, 'totalorders']);

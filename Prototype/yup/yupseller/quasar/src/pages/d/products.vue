@@ -139,15 +139,15 @@
         </template>
         <template v-else>
           <q-table
-            :data="data"
+            :rows="data"
             :columns="columns"
             :filter="filter"
             :loading="loading"
             row-key="name"
             unelevated
-            bordered
             flat
             :pagination="pagination"
+            class="myshadow"
           >
             <template v-slot:top>
               <span class="text-h4 font_700 q-mb-lg">Products</span>
@@ -196,7 +196,8 @@
                 <q-td
                   key="name"
                   :props="props"
-                  class=""
+                  @click="updaterouter(props.row.sku,props.row.slug)"
+                  class="cursor-pointer"
                 ><span class="font16 text-primary">{{ props.row.name }}</span>
                 </q-td>
                 <q-td

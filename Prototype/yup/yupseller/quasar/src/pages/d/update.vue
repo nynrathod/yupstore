@@ -45,7 +45,7 @@
                     </q-avatar>
                   </div>
                   <div class="col-7">
-                    <router-link :href="'https://quasar.dev/'+this.form.mdslug">
+                    <router-link :to="'https://quasar.dev/'+this.form.mdslug">
                       <span
                         class="text-h5 text-bold"
                         style="display: grid;"
@@ -687,12 +687,12 @@
                     />
                   </template>
                   <template v-else>
-                    <draggable
+                   <!-- <draggable
                       v-model="gallerylist"
                       group="people"
                       @start="drag=true"
                       @end="drag=false"
-                    >
+                    > -->
                       <!-- <div
                     v-for="element in gallerylist"
                     :key="element.id"
@@ -712,7 +712,7 @@
                         />
                       </q-img>
 
-                    </draggable>
+                  <!--  </draggable> -->
 
                     <q-uploader
                       v-model="multiplefile"

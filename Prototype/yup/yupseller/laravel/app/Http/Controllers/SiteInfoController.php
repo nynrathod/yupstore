@@ -12,8 +12,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 
-class SiteInfoController extends Controller
-{
+class SiteInfoController extends Controller {
     public function totalorders(Request $request) {
         // return response(Auth::user()->seller_id);
         return response(Product::where('seller_id', '=', Auth::user()->seller_id)->count());

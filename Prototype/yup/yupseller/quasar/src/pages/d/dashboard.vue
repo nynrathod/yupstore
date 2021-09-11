@@ -247,7 +247,7 @@
                         unchecked-icon="clear"
                         left-label
                         class=""
-                        @input="sitetoggle()"
+                        @update:model-value="sitetoggle()"
                       />
                     </template>
                     <template v-else>
@@ -456,7 +456,6 @@ export default {
       this.window.height = window.innerHeight;
     },
     sitetoggle () {
-      // alert(this.visibility)
       this.$store.dispatch('example/sitetoggle', { visibility: String(this.visibility) })
         .then(response => {
           this.$store.dispatch('example/sitestatus')

@@ -4,7 +4,7 @@
     class="bg-grey-1 container"
     style="height: 300px"
   >
-    <q-header
+   <!-- <q-header
       elevated
       class="bg-white text-grey-8"
       height-hint="64"
@@ -38,7 +38,7 @@
             shrink
             class="text-weight-bold"
           >
-            Yup Seller
+            ABCD
           </q-toolbar-title>
         </q-btn>
 
@@ -239,10 +239,10 @@
             <q-tooltip>Account</q-tooltip>
           </q-btn>
         </div>
-      </q-toolbar>
-    </q-header>
+      </q-toolbar> 
+    </q-header> -->
 
-    <q-drawer
+    <!-- <q-drawer
       v-model="leftDrawerOpen"
       show-if-above
       content-class="shop_drawer"
@@ -344,7 +344,7 @@
           </q-item>
         </q-list>
       </q-scroll-area>
-    </q-drawer>
+    </q-drawer> -->
 
     <q-page-container>
       <router-view />

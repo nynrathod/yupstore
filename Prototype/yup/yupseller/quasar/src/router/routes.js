@@ -28,7 +28,7 @@ const routes = [
     path: '/test',
     component: () => import('src/layouts/BlankLayout.vue'),
     children: [
-      { path: '/test', component: () => import('pages/Test.vue'), meta: { authOnly: true } },
+      // { path: '/test', component: () => import('pages/Test.vue'), meta: { authOnly: true } },
     ]
   },
   {

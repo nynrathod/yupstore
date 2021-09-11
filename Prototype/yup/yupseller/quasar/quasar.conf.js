@@ -99,6 +99,7 @@ module.exports = configure(function (ctx) {
         'SessionStorage',
         'Loading',
         'Meta',
+        'Notify'
       ]
     },
 

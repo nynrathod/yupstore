@@ -15,4 +15,11 @@ class OrderController extends Controller {
         return Order::where('seller_id', '=', Auth::user()->seller_id)->get();
     }
 
+    public function fetchorderinfo(Request $request) {
+        return response(Order::where('order_no', $request->orderno)
+          ->where('seller_id', Auth::user()->seller_id)
+          ->get());
+    }
+
+
 }

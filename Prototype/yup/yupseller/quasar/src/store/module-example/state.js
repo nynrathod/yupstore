@@ -11,6 +11,7 @@ export default function () {
     productjson: '',
     orderjson: '',
     product: '',
+    orderinfo: '',
     list: [
       {
         id: 1,
