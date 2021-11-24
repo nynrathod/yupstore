@@ -1,4 +1,3 @@
-
 import { Platform } from 'quasar'
 
 let redirectto;
@@ -11,7 +10,6 @@ else {
   redirectto = "AdminLayout.vue"
   platforms = "d"
 }
-
 
 
 const routes = [
@@ -30,14 +28,14 @@ const routes = [
     path: '/test',
     component: () => import('src/layouts/BlankLayout.vue'),
     children: [
-      { path: '/test', component: () => import('pages/Test.vue'), meta: { authOnly: true } },
+      // { path: '/test', component: () => import('pages/Test.vue'), meta: { authOnly: true } },
     ]
   },
   {
     path: '/',
     component: () => import('src/layouts/' + redirectto),
     children: [
-      // { path: '/', redirect: '/admin' },
+      { path: '/', redirect: '/admin' },
       { path: '/', component: () => import('pages/' + platforms + '/dashboard.vue'), meta: { authOnly: true } },
       { path: '/dashboard', component: () => import('pages/' + platforms + '/dashboard.vue'), meta: { authOnly: true } },
       { path: '/mystore', component: () => import('pages/' + platforms + '/mystore.vue'), meta: { authOnly: true } },
@@ -60,10 +58,9 @@ const routes = [
   // Always leave this as last one,
   // but you can also remove it
   {
-    path: '*',
+    path: '/:catchAll(.*)*',
     component: () => import('pages/Error404.vue')
   }
 ]
-
 
 export default routes

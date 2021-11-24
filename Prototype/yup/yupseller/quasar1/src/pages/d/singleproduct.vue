@@ -575,6 +575,7 @@
           </div>
 
         </form>
+          <q-select v-model="model" :options="options" label="Standard" />
       </q-page>
       <!-- <router-view /> -->
     </q-page-container>
@@ -585,7 +586,7 @@
 
 import Yup from '../../apis/Yup'
 import { LocalStorage, SessionStorage } from 'quasar'
-
+import { ref } from 'vue'
 
 import { fasGlobeAmericas, fasFlask } from "@quasar/extras/fontawesome-v5";
 
@@ -597,6 +598,11 @@ export default {
       catoptions.push('Category ' + i)
     }
     return {
+      model: ref('Google'),
+
+      options: [
+        'Google', 'Facebook', 'Twitter', 'Apple', 'Oracle'
+      ],
       form: {
         mdname: '',
         mdtag: null,
@@ -660,29 +666,6 @@ export default {
     return LocalStorage.getItem("auth");
   },
 
-  mounted () {
-    this.$root.$on("login", () => {
-      this.isLoggedIn = true;
-    });
-
-    this.isLoggedIn = !!LocalStorage.getItem("auth");
-
-    // this.$store.dispatch('example/auth', this.form)
-    //   .then((response) => {
-    //     this.form.mduid = this.$store.state.example.userid;
-    //   })
-
-
-    Yup.auth().then(response => {
-      this.user = response.data
-    })
-      .catch(error => {
-
-        // this.$router.push('/login');
-
-      })
-
-  },
   methods: {
     onClear () {
       this.exactPhrase = "";

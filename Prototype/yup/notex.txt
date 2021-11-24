@@ -178,6 +178,20 @@ inser numbers
 
 
 
+// For powersheel quasar issue
+
+For Windows 10, Windows 7, Windows 8, Windows Server 2008 R2 or Windows Server 2012, run the following commands as Administrator:
+
+x86 (32 bit)
+Open C:\Windows\SysWOW64\cmd.exe
+Run the command powershell Set-ExecutionPolicy RemoteSigned
+
+x64 (64 bit)
+Open C:\Windows\system32\cmd.exe
+Run the command powershell Set-ExecutionPolicy RemoteSigned
+
+You can check mode using
+
 
 
 
@@ -207,7 +221,10 @@ place route, then component and layout, update quasar config as old
 then check stylus land in all file
 add vue-validate, draggable and other require ext, js-cookie
 
-
+for laravel to new
+add global composer for laravel
+then key generate 
+check env file
 
 
 

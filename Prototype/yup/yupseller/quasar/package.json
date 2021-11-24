@@ -2,8 +2,8 @@
   "name": "yupseller",
   "version": "0.0.1",
   "description": "A Quasar Framework app",
-  "productName": "yupseller",
-  "author": "nynrathod <64688014+nynrathod@users.noreply.github.com>",
+  "productName": "YupSeller",
+  "author": "",
   "private": true,
   "scripts": {
     "test": "echo \"No test specified\" && exit 0"
@@ -14,7 +14,8 @@
     "core-js": "^3.6.5",
     "js-cookie": "^3.0.1",
     "quasar": "^2.0.0",
-    "stylus-loader": "^6.1.0",
+    "vue-image-zoomer": "^1.2.3",
+    "vue-slick-carousel": "^1.0.6",
     "vuedraggable": "^2.24.3",
     "vuex": "^4.0.1"
   },

@@ -335,6 +335,23 @@ export function totalorders ({ commit }) {
         })
 }
 
+export function fetchorderinfo ({ commit }, { orderno }) {
+    // alert(udata.mddomain)
+    // console.log(sid);
+    return Yup.fetchorderinfo({ orderno })
+        .then((response) => {
+            commit('fetchorderinfo', response.data)
+            // console.log(response.data);
+            return response
+        })
+        .catch(error => {
+            if (error.response.status === 422) {
+                return error.response
+            }
+        })
+}
+
+
 export function sitestatus ({ commit }) {
     return Yup.sitestatus()
         .then((response) => {

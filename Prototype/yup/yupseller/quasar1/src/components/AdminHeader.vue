@@ -289,7 +289,7 @@ export default {
 };
 </script>
 
-<style lang="stylus">
+<style>
 .GNL__toolbar {
   height: 64px;
 }

@@ -123,7 +123,7 @@
         </template>
         <template v-else>
           <q-table
-            :data="data"
+            :rows="data"
             :columns="columns"
             :filter="filter"
             :loading="loading"
@@ -199,7 +199,7 @@
                   class="text-primary"
                 >
                   <span
-                    @click="updaterouter(props.row.sku,props.row.slug)"
+                    @click="updaterouter(props.row.order_no,props.row.slug)"
                     class="text-primary"
                   >Edit</span>
                 </q-td>
@@ -273,8 +273,8 @@ export default {
       })
   },
   methods: {
-    updaterouter (sku, slug) {
-      this.$router.push({ path: `/update/${sku}/${slug}` })
+    updaterouter (order_no, slug) {
+      this.$router.push({ path: `/order-detail/${order_no}` })
     },
     deleteItem (item) {
       const index = this.data.indexOf(item);

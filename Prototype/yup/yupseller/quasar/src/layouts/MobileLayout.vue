@@ -10,7 +10,7 @@
   </q-layout>
 </template>
 
-<script lang="ts">
+<script>
 import Header from "components/MobileHeader.vue";
 import Footer from "components/MobileFooter.vue";
 
